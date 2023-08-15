@@ -5,12 +5,16 @@
 // Datatypes in JS
 
 /* 
-    1. number
-    2. bigint
-    3. string
-    4. boolean
-    5. null
-    6. undefined
-    7. symbol
-    8. object
+    1. number - number
+    2. bigint - bigint
+    3. string - string
+    4. boolean - boolean
+    5. null - object
+    6. undefined - undefined
+    7. symbol - symbol
+    8. object - object
 */
+
+let num = 2949950505n
+
+console.log(typeof num)
