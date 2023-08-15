@@ -34,5 +34,14 @@ let booleanIsLoggedIn = Boolean(isLoggedIn);
 let num = 15;
 
 let str_num = String(num);
-console.log(str_num);
-console.log(typeof str_num);
+// console.log(str_num);
+// console.log(typeof str_num);
+
+
+
+/////////////////////////////////////////////////
+
+
+// conversions: +true => 1, +"" => 0
+console.log(+true);
+console.log(+"");
