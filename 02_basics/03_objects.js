@@ -1,9 +1,8 @@
 // Singleton
+const obj = new Object(); // {}
 
 
-
-// object literals
-
+// object literals (Non-singleton)
 const mySym = Symbol("I am a Symbol");
 
 const jsUser = {
