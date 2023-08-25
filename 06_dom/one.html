@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+
+<script>
+    const parent = document.querySelector(".parent"); // Targeting parent div.
+    console.log(parent); // HTMLCollection
+
+    // Converting HTMLCollection into array.
+    const childrenArr = Array.from(parent.children);  // children array containing days.
+
+    const dayOne = childrenArr[0]; // <div class="day">Monday</div>
+    console.log(dayOne.parentElement);  // <div class="parent">...</div>
+    console.log(dayOne.nextElementSibling); // <div class="day">Tuesday</div>
+    console.log(dayOne.previousElementSibling); // null, beacuse Monday has no previous element sibling.
+
+    // Important: childNodes property.
+    console.log("NODES: ", parent.childNodes)  // Get all childNodes (element node, text node, comment node)
+
+    
+
+
+    
+    
+</script>
+
+</html>
