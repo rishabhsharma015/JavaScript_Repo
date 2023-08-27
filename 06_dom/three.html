@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul>
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+
+    // Adding li elements.
+    
+    const ul = document.querySelector('ul');
+    function createListElement(text){
+        const li = document.createElement('li');
+        const textNode = document.createTextNode(text);
+        li.appendChild(textNode);
+        ul.appendChild(li);
+    }
+    createListElement("Java");
+    createListElement("Python");
+    createListElement("Angular");
+
+
+    // Editing li elements. (1st way)
+
+    // 1. selecting second element.
+    const secondLi = document.querySelectorAll("li")[1];
+    
+    // 2. creating new element.
+    const newLi = document.createElement('li');
+    newLi.textContent = "Golang";
+    
+    // 3. replacing old (second) element with new (newLi) element.
+    secondLi.replaceWith(newLi);
+
+
+
+    // Editing li elements. (2nd way)
+
+    const secondLi2 = document.querySelectorAll("li")[1];
+    secondLi2.innerHTML = "Mojo";
+
+
+    // Editing li elements. (3rd way)
+
+    const secondLi3 = document.querySelectorAll("li")[1];
+    secondLi3.outerHTML = "<li>TypeScript</li>"
+
+
+
+    // Deleting or removing li elements.
+
+    const lastLi = document.querySelectorAll("li")[3];       // selected the last element
+    lastLi.remove();                                         // removed the last element from the dom.
+
+
+</script>
+
+
+</html>
